@@ -32,9 +32,9 @@ class AddFishForm extends React.Component {
                 </select>
                 <input name="desc" ref={this.descRef} placeholder="Desc" />
                 <input name="image" ref={this.imageRef} type="text" placeholder="Image" />
-                <button type="submit">+Add Fish</button>
+                <button type="submit">+ Add Fish</button>
             </form>
-    )
+        )
     }
 }
 
