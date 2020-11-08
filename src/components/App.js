@@ -56,11 +56,11 @@ class App extends React.Component{
         //3. call setState to update our state
         this.setState({order});
     }
-    RemoveOrder = (key) => {
+    removeOrder = key => {
         //1. Spread out state and create a copy
         const order = {...this.state.order };
         //2. Either remove order or update number in our order
-        order[key] = order[key] - 1;
+        delete order[key];
         //3. set order state
         this.setState({order});
     }
@@ -75,11 +75,12 @@ class App extends React.Component{
                 index = {key}
                 details={this.state.fishes[key]}
                 AddToOrder={this.AddToOrder}
-                RemoveOrder={this.RemoveOrder} />)}
+                removeOrder={this.removeOrder} />)}
          </ul>
          </div>
          <Order fishes={this.state.fishes} 
-                order={this.state.order} />
+                order={this.state.order} 
+                removeOrder={this.removeOrder}/>
          <Inventory 
             addFish={this.addFish}
             updateFish={this.updateFish}
