@@ -41,9 +41,9 @@ class App extends React.Component{
         //1. Take a copy of the fish
         const fishes = { ...this.state.fishes };
         //2. Update the state of Fishes
-        fishes[key] = null
+        fishes[key] = null;
         //3. Set state of current fishes
-        this.setState({ fishes })
+        this.setState({ fishes });
     }
     loadSampleFishes = () => {
         this.setState({ fishes: sampleFishes})
@@ -63,7 +63,6 @@ class App extends React.Component{
         order[key] = order[key] - 1 || 1;
         //3. set order state
         this.setState({order});
-        orer
     }
  render() {
      return (
