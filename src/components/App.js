@@ -74,8 +74,7 @@ class App extends React.Component{
             <Fish key = {key}
                 index = {key}
                 details={this.state.fishes[key]}
-                AddToOrder={this.AddToOrder}
-                removeOrder={this.removeOrder} />)}
+                AddToOrder={this.AddToOrder} />)}
          </ul>
          </div>
          <Order fishes={this.state.fishes} 
