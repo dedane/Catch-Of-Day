@@ -60,7 +60,7 @@ class App extends React.Component{
         //1. Spread out state and create a copy
         const order = {...this.state.order };
         //2. Either remove order or update number in our order
-        order[key] = order[key] - 1 || 1;
+        order[key] = order[key] - 1;
         //3. set order state
         this.setState({order});
     }
