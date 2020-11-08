@@ -32,9 +32,9 @@ class App extends React.Component{
     updateFish = (key, updatedFish) => {
         //1. Take a copy of the current state
         const fishes = { ...this.state.fishes };
-        //1. Update fish
+        //2. Update fish
         fishes[key] = updatedFish;
-        //2. Set state of current Fish
+        //3. Set state of current Fish
         this.setState({ fishes })
     }
     loadSampleFishes = () => {
