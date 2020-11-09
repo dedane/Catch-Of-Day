@@ -6,6 +6,17 @@ import firebase from 'firebase';
 import base,{ firebaseApp } from '../base';
 
 class Inventory extends React.Component{
+    state = {
+        uid: null,
+        owner: null
+    }
+    componentDidMount() {
+        firebase.auth().onAuthStateChanged(user => {
+            if(user) {
+                this.authHandler({ user });
+            }
+        })
+    }
     authHandler = async authData => {
         //1. Look up the current stire in database
         const store = await base.fetch(this.props.storeId, { context: this })
@@ -22,9 +33,12 @@ class Inventory extends React.Component{
                 owner: store.owner || authData.user.uid
             })
     }
-    authenticate = (provider) => {
+    authenticate = provider => {
         const authProvider =new firebase.auth[ `${provider}AuthProvider`]();
-        firebaseApp.auth().signInWithPopup(authProvider).then(this.authHandler);
+        firebaseApp
+        .auth()
+        .signInWithPopup(authProvider)
+        .then(this.authHandler);
     }
     
     logout = async() => {
