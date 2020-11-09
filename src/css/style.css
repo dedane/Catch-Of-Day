@@ -532,6 +532,8 @@ button.success:after,
 input[type=submit].success:after {
   background: #2dc22d;
 }
+button.logout,
+input[type=submit].logout,
 button.github,
 input[type=submit].github,
 button.facebook,
@@ -544,6 +546,14 @@ input[type=submit].twitter {
   width: 100%;
   color: #fff;
   padding: 2rem;
+}
+button.logout,
+input[type=submit].logout {
+  background: crimson;
+}
+button.logout,
+input[type=submit].logoutafter {
+  background: red;
 }
 button.github,
 input[type=submit].github {
