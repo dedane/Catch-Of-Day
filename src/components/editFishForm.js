@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-class editFishForm extends React.Component {
+class EditFishForm extends React.Component {
     handleChange = (event) => {
         //console.log(event.currentTarget.name)
         //Update that fish
@@ -49,4 +49,4 @@ class editFishForm extends React.Component {
     }
 }
 
-export default editFishForm;
+export default EditFishForm;
