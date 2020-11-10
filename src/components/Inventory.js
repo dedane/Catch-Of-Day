@@ -1,6 +1,6 @@
 import React from 'react'
 import AddFishForm from './AddFishForm';
-import EditFishForm from './EditFishForm';
+import EditFishForm from "./EditFishForm.1";
 import Login from './Login';
 import firebase from 'firebase';
 import base,{ firebaseApp } from '../base';
